@@ -1,6 +1,8 @@
 
 # CAPM Calculator Pro
 
+# https://capm-calculator-pro.streamlit.app/
+
 ## Overview
 
 The *CAPM Calculator Pro* is an interactive web application built with Streamlit that allows investors, students, and financial analysts to perform sophisticated CAPM analysis on any combination of stocks. The application calculates key financial metrics, visualizes risk-return relationships, and helps optimize portfolio allocation based on the Capital Asset Pricing Model framework
