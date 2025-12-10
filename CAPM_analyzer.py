@@ -104,7 +104,7 @@ with st.sidebar:
         with col3:
             market_ticker = st.selectbox(
                 '**Market Index**',
-                ['SPY', '^GSPC', 'QQQ', 'DIA', 'IWM'],
+                ['SPY', 'QQQ', 'DIA', 'IWM'],  # REMOVED: '^GSPC'
                 index=0
             )
         with col4:
