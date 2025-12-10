@@ -1,0 +1,7 @@
+streamlit>=1.29.0  # Must be >=1.29.0 for NumPy 2.0 support
+pandas>=2.0.0
+numpy>=2.0.0
+plotly>=5.18.0
+yfinance>=0.2.54
+matplotlib>=3.7.2
+xarray>=2024.1.1  # Optional but recommended for Plotly compatibility
