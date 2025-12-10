@@ -705,16 +705,20 @@ if st.button('🚀 Calculate CAPM Analysis', type='primary', use_container_width
                             
                             risk_df = pd.DataFrame(risk_metrics)
                             
-                            # Scatter plot: Risk vs Return
+                            # Scatter plot: Risk vs Return - FIXED
                             fig_risk_return = px.scatter(
                                 risk_df,
                                 x='Volatility',
                                 y='Sharpe Ratio',
-                                size='Beta',
+                                size=np.abs(risk_df['Beta']),  # Use absolute Beta for size
                                 color='Ticker',
                                 hover_name='Ticker',
                                 title="Risk-Return Profile: Volatility vs Sharpe Ratio",
-                                labels={'Volatility': 'Annual Volatility', 'Sharpe Ratio': 'Sharpe Ratio'}
+                                labels={
+                                    'Volatility': 'Annual Volatility', 
+                                    'Sharpe Ratio': 'Sharpe Ratio',
+                                    'size': '|Beta|'  # Legend shows absolute Beta
+                                }
                             )
                             fig_risk_return.update_layout(height=500)
                             st.plotly_chart(fig_risk_return, use_container_width=True)
